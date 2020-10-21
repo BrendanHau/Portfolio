@@ -2,6 +2,7 @@
 $(document).ready(function () {
   history.scrollRestoration = "manual";
   $(window).scrollTop(0);
+  document.getElementById("content-wrapper").style.display = "block";
 });
 
 
