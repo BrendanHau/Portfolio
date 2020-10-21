@@ -218,7 +218,7 @@ html {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url("/assets/intro_background.jpg");
+  background-image: url("./assets/intro_background.jpg");
   background-size: cover;
   color: red;
   justify-content: center;
@@ -274,7 +274,7 @@ html {
 .about-wrapper .about-container .about-photo {
   height: 200px;
   width: 200px;
-  background-image: url("/assets/about-img.png");
+  background-image: url("./assets/about-img.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -332,37 +332,37 @@ html {
 }
 
 #html {
-  background-image: url("/assets/skills-html.png");
+  background-image: url("./assets/skills-html.png");
 }
 #css {
-  background-image: url("/assets/skills-css.png");
+  background-image: url("./assets/skills-css.png");
 }
 #js {
-  background-image: url("/assets/skills-js.png");
+  background-image: url("./assets/skills-js.png");
 }
 #c {
-  background-image: url("/assets/skills-c.png");
+  background-image: url("./assets/skills-c.png");
 }
 #python {
-  background-image: url("/assets/skills-python.png");
+  background-image: url("./assets/skills-python.png");
 }
 #java {
-  background-image: url("/assets/skills-java.png");
+  background-image: url("./assets/skills-java.png");
 }
 #github {
-  background-image: url("/assets/skills-github.png");
+  background-image: url("./assets/skills-github.png");
 }
 #microsoft {
-  background-image: url("/assets/skills-microsoft.png");
+  background-image: url("./assets/skills-microsoft.png");
 }
 #photoshop {
-  background-image: url("/assets/skills-photoshop.png");
+  background-image: url("./assets/skills-photoshop.png");
 }
 
 /* Resume Styles */
 .resume-wrapper {
   display: flex;
-  background-image: url("/assets/resume_background.jpg");
+  background-image: url("./assets/resume_background.jpg");
   background-size: cover;
   justify-content: center;
   align-items: center;
@@ -430,7 +430,7 @@ html {
 }
 
 #portfolio-item_maplestory {
-  background-image: url("/assets/maplestory_site_v2.png");
+  background-image: url("./assets/maplestory_site_v2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
