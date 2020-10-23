@@ -223,7 +223,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url("../assets/intro_background.jpg");
-  background-size: cover;
+  background-size: contain;
   color: red;
   justify-content: center;
   align-items: center;
