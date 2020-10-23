@@ -28,7 +28,7 @@ for (let item of navbarItems) {
 const navbar = document.querySelector("nav");
 const sectionOne = document.querySelector("#intro-section");
 const sectionOneOptions = {
-  rootMargin: "-200px 0px 0px 0px",
+  rootMargin: "0px 0px 0px 0px",
 };
 
 const sectionOneObserver = new IntersectionObserver(function (
