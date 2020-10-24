@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- HTML Setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brendan Portfolio Website</title>
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
     <!-- Links to Fonts -->
     <link
@@ -26,10 +27,12 @@
   </head>
   <body>
     <!-- Content Wrapper -->
-    <div class="content-wrapper" id="content-wrapper">
+    <div id="content-wrapper">
       <!-- Navigation Bar -->
       <nav class="navbar">
-        <a href="https://brendanhau.github.io/Portfolio/" class="brand-title">BRENDAN HAU</a>
+        <a href="https://brendanhau.github.io/Portfolio/" class="brand-title"
+          >BRENDAN HAU</a
+        >
         <a class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -55,11 +58,10 @@
 
       <!-- Intro Section -->
       <div class="intro-wrapper" id="intro-section">
-        <div class="parallax-wrapper">
-          <div class="content fade-in">
-            <div class="content-main">Hey there! I'm <span>Brendan</span>.</div>
-            <div class="content-under">Software Developer</div>
-          </div>
+        <div class="intro-overlay"></div>
+        <div class="content fade-in">
+          <div class="content-main">Hey there! I'm <span>Brendan</span>.</div>
+          <div class="content-under">Software Developer</div>
         </div>
       </div>
 
@@ -96,9 +98,7 @@
 
       <!-- Resume -->
       <div class="resume-wrapper" id="resume-section">
-        <div class="parallax-wrapper">
-          <a href="./brendanhau_resume.pdf"> View Resume </a>
-        </div>
+        <a href="/brendanhau_resume.pdf"> View Resume </a>
       </div>
 
       <!-- Popup Background Overlay -->
@@ -224,6 +224,6 @@
 
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
-</html> 
+</html>
