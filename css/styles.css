@@ -581,7 +581,7 @@ html {
 }
 
 .modal-image {
-  max-width: calc(400px - 10%);
+  max-width: 90%;
   padding-top: 40px;
   overflow: hidden;
 }
