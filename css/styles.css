@@ -487,13 +487,37 @@ html {
   color: var(--clr-light);
 }
 
-.portfolio-item:hover .portfolio-item_content {
+.portfolio-item_content button:hover {
+  background-color: var(--clr-accent-red);
+  color: var(--clr-light);
+}
+
+.portfolio-item_content {
   opacity: 1;
 }
 
-.portfolio-item:hover .portfolio-item_img {
+.portfolio-item_img {
   filter: grayscale(1) blur(2px) brightness(0.4);
   transition: 0.3s ease-in-out;
+}
+
+@media (hover: hover), (-ms-high-contrast: none) {
+  .portfolio-item_content {
+    opacity: 0;
+  }
+
+  .portfolio-item:hover .portfolio-item_content {
+    opacity: 1;
+  }
+
+  .portfolio-item_img {
+    filter: grayscale(0) blur(0px) brightness(1);
+  }
+
+  .portfolio-item:hover .portfolio-item_img {
+    filter: grayscale(1) blur(2px) brightness(0.4);
+    transition: 0.3s ease-in-out;
+  }
 }
 
 .modal {
