@@ -495,8 +495,8 @@ html {
   filter: grayscale(1) blur(0px) brightness(0.4);
   transition: 0.3s ease-in-out;
 }
-/*
-@media (hover: hover), (-ms-high-contrast: none) {
+
+@media (hover: hover), (pointer: fine), (-ms-high-contrast: none) {
   .portfolio-item_content {
     opacity: 0;
   }
@@ -514,7 +514,7 @@ html {
     filter: grayscale(1) blur(2px) brightness(0.4);
   }
 }
-*/
+
 .modal {
   position: fixed;
   top: 50%;
