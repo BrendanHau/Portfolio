@@ -487,17 +487,12 @@ html {
   color: var(--clr-light);
 }
 
-.portfolio-item_content button:hover {
-  background-color: var(--clr-accent-red);
-  color: var(--clr-light);
-}
-
 .portfolio-item_content {
   opacity: 1;
 }
 
 .portfolio-item_img {
-  filter: grayscale(1) blur(2px) brightness(0.4);
+  filter: grayscale(1) blur(0px) brightness(0.4);
   transition: 0.3s ease-in-out;
 }
 /*
