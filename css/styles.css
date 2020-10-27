@@ -370,7 +370,6 @@ html {
   display: flex;
   background-image: url("../assets/resume_background.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   text-align: center;
