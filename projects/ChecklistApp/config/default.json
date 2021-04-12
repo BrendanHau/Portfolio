@@ -1,0 +1,85 @@
+{
+    "DAILY_RESET": {
+        "hour": 20,
+        "minute": 0,
+        "second": 0
+    },
+    "WEEKLY_BOSS_RESET": {
+        "day": 3,
+        "hour": 20,
+        "minute": 0,
+        "second": 0
+    },
+    "WEEKLY_OTHER_RESET": {
+        "day": 0,
+        "hour": 20,
+        "minute": 0,
+        "second": 0
+    },
+    "checklistItems": {
+        "dailyBosses": {
+            "zakum": "dailies_zakum.png",
+            "von_leon": "dailies_von_leon.png",
+            "horntail": "dailies_horntail.png",
+            "ranmaru": "dailies_ranmaru.png",
+            "julietta": "dailies_julieta.png",
+            "arkarium": "dailies_arkarium.png",
+            "pinkbean": "dailies_pinkbean.png",
+            "papulatus": "dailies_papulatus.png",
+            "crimson_queen": "dailies_crimson_queen.png",
+            "pierre": "dailies_pierre.png",
+            "vonbon": "dailies_vonbon.png",
+            "vellum": "dailies_vellum.png",
+            "hilla": "dailies_hilla.png",
+            "magnus": "dailies_magnus.png",
+            "gollux": "dailies_gollux.png"
+        },
+        "dailyOther": {
+            "vanishing_journey": "dailies_vj.png",
+            "chuchu": "dailies_chuchu.png",
+            "lachelein": "dailies_lach.png",
+            "arcana": "dailies_arcana.png",
+            "morass": "dailies_morass.png",
+            "esfera": "dailies_esfera.png",
+            "moonbridge": "dailies_moonbridge.png",
+            "legion": "dailies_legion.png",
+            "commerci": "dailies_commerci.png",
+            "monster_park": "dailies_monster_park.png",
+            "maple_tour": "dailies_maple_tour.png",
+            "ursus": "dailies_ursus.png",
+            "monster_collection": "dailies_monster_collection.png",
+            "phantom_forest": "dailies_phantom_forest.png",
+            "yu_garden": "dailies_yu_garden.png",
+            "fairy_bros": "dailies_fairy_bros.png",
+            "golden_fairy_bros": "dailies_golden_fairy_bros.png"
+        },
+        "weeklyBosses": {
+            "cygnus": "weeklies_cygnus.png",
+            "czakum": "weeklies_zakum.png",
+            "princess_no": "weeklies_princess_no.png",
+            "cpinkbean": "weeklies_pinkbean.png",
+            "cpapulatus": "weeklies_papulatus.png",
+            "ccrimson_queen": "weeklies_crimson_queen.png",
+            "cpierre": "weeklies_pierre.png",
+            "cvonbon": "weeklies_vonbon.png",
+            "cvellum": "weeklies_vellum.png",
+            "hhilla": "weeklies_hilla.png",
+            "hmagnus": "weeklies_magnus.png",
+            "aketchi": "weeklies_aketchi.png",
+            "lotus": "weeklies_lotus.png",
+            "damien": "weeklies_damien.png",
+            "lucid": "weeklies_lucid.png",
+            "will": "weeklies_will.png",
+            "gloom": "weeklies_gloom.png",
+            "darknell": "weeklies_darknell.png",
+            "verus_hilla": "weeklies_verus_hilla.png"
+        },
+        "weeklyOther": {
+            "dojo": "weeklies_mu_lung_dojo.png",
+            "scrapyard": "weeklies_scrapyard.png",
+            "darkworld_tree": "weeklies_darkworld_tree.png",
+            "guild_supplies": "weeklies_guild_supplies.png",
+            "kritias": "weeklies_kritias.png"
+        }
+    }
+}

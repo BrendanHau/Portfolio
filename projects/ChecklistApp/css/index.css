@@ -1,0 +1,373 @@
+/*===============================================================================
+// General Styles
+//==============================================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*===============================================================================
+// Custom Properties
+//==============================================================================*/
+:root {
+    /* Fonts */
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Lato", sans-serif;
+
+    /* Font Weights */
+    --fw-reg: 300;
+    --fw-bold: 600;
+
+    /* Font Sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 0.7rem;
+
+    /* Colours */
+    --clr-text-default: #f1f1f1;
+    --clr-nav-highlight: #deb900;
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+    --clr-title: #deb900;
+}
+
+/*===============================================================================
+// Main
+//==============================================================================*/
+#main {
+    background: rgba(0, 0, 0, 0);
+}
+
+/*===============================================================================
+// Navigation Bar
+//==============================================================================*/
+#navbar {
+    height: min(50px, 15vh);
+    display: flex;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+
+    -webkit-app-region: drag;
+
+    font-family: var(--ff-primary);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(40, 40, 40, 0.4);
+}
+
+.nav-header--container {
+    width: 60%;
+    height: calc(100% - 1px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0% 5%;
+    border-radius: 0px 12px 0px 0px;
+    background: rgba(40, 40, 40, 0.4);
+
+    font-size: min(24px, 7vh);
+    font-weight: var(--fw-bold);
+    color: rgba(222, 185, 0, 0.75);
+}
+
+.nav-header--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-header--icon:hover {
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.nav-items--container {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav--separator {
+    background: rgba(255, 255, 255, 0.38);
+    width: 1px;
+    height: 40%;
+}
+
+.nav-item span {
+    font-size: min(16px, 3.8vw);
+    cursor: pointer;
+}
+
+i {
+    display: block;
+    color: rgba(255, 255, 255, 0.38);
+    transition: color 0.3s ease-out;
+    text-align: center;
+
+    -webkit-app-region: no-drag;
+}
+
+i:hover {
+    color: var(--clr-nav-highlight);
+    transition: color 0.3s ease-out;
+}
+
+/*===============================================================================
+// Content
+//==============================================================================*/
+.content-container {
+    position: absolute;
+    width: 100vw;
+    height: 18vh;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+#content {
+    width: 18vh;
+    height: 90vw;
+    transform: rotate(-90deg) translateX(-18vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    margin-left: 5vw;
+}
+
+.content-horizontal {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    transform: rotate(90deg) translateY(-18vh);
+    transform-origin: top left;
+    align-items: center;
+    justify-content: center;
+}
+
+input.content-item[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: min(80px, 15vh);
+    width: min(80px, 15vh);
+    margin: calc((18vh - min(80px, 15vh)) / 2) 1vh;
+    position: relative;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+input.content-item[type="checkbox"]:not(:checked):before {
+    content: "";
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background: #ffffff;
+    -webkit-transition: -webkit-transform 0.5s ease, -webkit-filter 0.5s ease;
+    -moz-transition: -moz-transform 0.5s ease, -moz-filter 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, -ms-filter 0.5s ease;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    z-index: -1;
+}
+
+input.content-item[type="checkbox"]:not(:checked):hover:before {
+    transform: scale(1.1);
+    filter: blur(0.8vh);
+}
+
+input.content-item[type="checkbox"]:not(:checked):before:focus {
+    outline: none;
+}
+
+input.content-item[type="checkbox"]:focus {
+    outline: none;
+}
+
+input.content-item[type="checkbox"]:checked {
+    animation: shake 0.35s;
+    transition: 0.7s;
+    filter: grayscale(100%) brightness(50%);
+}
+
+input.content-item[type="checkbox"]:not(checked) {
+    transition: 0s;
+}
+
+/*===============================================================================
+// Clocks
+//==============================================================================*/
+
+#clocks {
+    position: relative;
+    margin-top: 18vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.clock-module {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: calc((100vh - min(15vh, 50px) - 18vh) / 2);
+}
+
+.clock-module + .clock-module {
+    margin-top: 0px;
+}
+
+.clock-title {
+    font-family: var(--ff-primary);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: min(min(8vh, 6vw), 40px);
+    width: 30%;
+}
+
+.clock-display {
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: min(min(8vh, 6vw), 40px);
+    width: 70%;
+}
+
+.clock-display > div {
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.clock-display div > span {
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.smalltext {
+    font-size: 12px;
+}
+
+/*===============================================================================
+// Animations
+//==============================================================================*/
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    5% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    10% {
+        transform: translate(-2px, 0px) rotate(1deg);
+    }
+    15% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    20% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+    25% {
+        transform: translate(-2px, 1px) rotate(-1deg);
+    }
+    30% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    35% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    40% {
+        transform: translate(1px, 2px) rotate(-1deg);
+    }
+    45% {
+        transform: translate(1px, -2px) rotate(0deg);
+    }
+    50% {
+        transform: translate(1px, 1px) rotate(-1deg);
+    }
+    55% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    60% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    65% {
+        transform: translate(-2px, 0px) rotate(1deg);
+    }
+    70% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+    75% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+    80% {
+        transform: translate(-2px, 1px) rotate(-1deg);
+    }
+    85% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    90% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    95% {
+        transform: translate(1px, 2px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(0deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*===============================================================================
+// Other
+//==============================================================================*/
+@media screen and (min-height: 280px) {
+    #navbar ul li a i {
+        font-size: 20px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}

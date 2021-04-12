@@ -1,0 +1,309 @@
+/*===============================================================================
+// General Styles
+//==============================================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.87);
+    background: rgba(0, 0, 0, 0.93);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*===============================================================================
+// Custom Properties
+//==============================================================================*/
+:root {
+    /* Fonts */
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Lato", sans-serif;
+
+    /* Font Weights */
+    --fw-reg: 300;
+    --fw-bold: 600;
+
+    /* Font Sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 0.85rem;
+
+    /* Colours */
+    --clr-text-default: #f1f1f1;
+    --clr-highlight: #33ff00;
+    --clr-highlight-dull: #79bf67;
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+}
+
+/*===============================================================================
+// Input
+//==============================================================================*/
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.titlebar {
+    width: 100vw;
+    height: 30px;
+    background: rgb(24, 24, 24);
+
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+
+    -webkit-app-region: drag;
+}
+
+.titlebar .titlebar-btn {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+}
+
+.titlebar .titlebar-btn i {
+    -webkit-text-stroke: 3px rgb(24, 24, 24);
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 20px;
+}
+
+#minimize-btn:hover,
+#minimize-btn:hover i {
+    background: rgb(48, 48, 48);
+    -webkit-text-stroke: 3px rgb(48, 48, 48);
+    color: rgb(223, 223, 223);
+}
+
+#close-btn:hover,
+#close-btn:hover i {
+    background: rgb(179, 0, 0);
+    -webkit-text-stroke: 3px rgb(179, 0, 0);
+    color: rgb(223, 223, 223);
+}
+
+/* Timer Input */
+#timer--input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.timer--input-btns {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0vh;
+}
+
+.timer-selectors-container {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="number"] {
+    height: min(20vh, 100px);
+    width: min(20vw, 150px);
+    font-size: min(15vh, 54px);
+
+    text-align: center;
+    margin: 0vw 3vw;
+
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+input[type="number"]:focus {
+    outline: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    position: relative;
+    color: #01cc67ad;
+    border: 2px solid #01cc67ad;
+    border-radius: 5px;
+
+    font-size: min(6vw, 7vh, 30px);
+    padding: 0.3em 0.5em;
+    margin: 0vh 3vw;
+
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #01cc67ad;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.time-colon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: min(20vh, 100px);
+    font-size: min(15vh, 54px);
+}
+
+#startBtn {
+    margin-top: 16vh;
+}
+
+/*===============================================================================
+// Display
+//==============================================================================*/
+#timer--display {
+    display: block;
+    padding-top: 30px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.display-large-clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 40vh;
+    width: 100vw;
+
+    background: blue;
+}
+
+.display-small-clocks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30vh;
+    width: 100vw;
+
+    background: purple;
+}
+
+.display-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(30vh - 30px);
+    width: 100vw;
+
+    background: red;
+}
+
+.display-small-clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 45vw;
+
+    background: green;
+}
+
+/*===============================================================================
+// Clocks
+//==============================================================================*/
+.display-small-clock-title {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+    font-size: max(12px, min(3vh, 3vw));
+    color: #deb900;
+}
+
+.small-clock-module {
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: max(12px, min(3vh, 3vw));
+}
+
+.small-clock-module > div {
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.small-clock-module div > span {
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.display-large-clock {
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: max(20px, min(5vh, 5vw));
+}
+
+.display-large-clock > div {
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.display-large-clock div > span {
+    /*padding: 5px 8px;*/
+    padding: 2vh 5vw;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.largetext {
+    font-size: max(12px, min(3vh, 3vw));
+}
+
+/* Other */
+
+.hidden {
+    display: none !important;
+}
