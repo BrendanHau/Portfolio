@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Maplestory Checklist - Timer</title>
+
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="./css/timer.css" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+        <!-- Links to Icons -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="main">
+            <div class="titlebar">
+                <div class="titlebar-btn" id="minimize-btn">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+                <div class="titlebar-btn" id="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="timer-content-container">
+                <div id="timer--input" class="">
+                    <div class="timer--input-btns">
+                        <input
+                            type="number"
+                            min="0"
+                            max="24"
+                            oninput="if (this.value > 24 || this.value < 0 || this.value.length > 2) {
+                        this.value = 24;
+                    }"
+                            id="hour-input"
+                        />
+                        <div class="time-colon">:</div>
+                        <input
+                            type="number"
+                            min="0"
+                            max="60"
+                            oninput="if (this.value > 59 || this.value < 0 || this.value.length > 2) {
+                        this.value = 59;
+                    }"
+                            id="minute-input"
+                        />
+                        <div class="time-colon">:</div>
+                        <input
+                            type="number"
+                            min="0"
+                            max="24"
+                            oninput="if (this.value > 59 || this.value < 0 || this.value.length > 2) {
+                        this.value = 59;
+                    }"
+                            id="second-input"
+                        />
+                    </div>
+
+                    <div class="timer-selectors-container">
+                        <input type="radio" name="timer-setting" id="radio-15m" />
+                        <label for="radio-15m">15m</label>
+                        <input type="radio" name="timer-setting" id="radio-30m" checked />
+                        <label for="radio-30m">30m</label>
+                        <input type="radio" name="timer-setting" id="radio-60m" />
+                        <label for="radio-60m">60m</label>
+                    </div>
+
+                    <button id="startBtn">Start</button>
+                </div>
+                <div id="timer--display" class="hidden">
+                    <div class="display-large-clock-container">
+                        <div class="display-large-clock" id="clock-remainder">
+                            <div>
+                                <span class="hours"></span>
+                                <div class="largetext">Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div class="largetext">Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div class="largetext">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display-small-clocks-container">
+                        <div class="display-small-clock" id="clock-last-update">
+                            <div class="display-small-clock-title">Last Update</div>
+                            <div class="small-clock-module" id="clock-last-update">
+                                <div>
+                                    <span class="hours"></span>
+                                </div>
+                                <div><span>:</span></div>
+                                <div>
+                                    <span class="minutes"></span>
+                                </div>
+                                <div><span>:</span></div>
+                                <div>
+                                    <span class="seconds"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-small-clock" id="clock-next-update">
+                            <div class="display-small-clock-title">Next Update</div>
+                            <div class="small-clock-module" id="clock-next-update">
+                                <div>
+                                    <span class="hours"></span>
+                                </div>
+                                <div><span>:</span></div>
+                                <div>
+                                    <span class="minutes"></span>
+                                </div>
+                                <div><span>:</span></div>
+                                <div>
+                                    <span class="seconds"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display-buttons-container">
+                        <button id="pauseBtn">Pause</button>
+                        <button id="resetBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./js/timer.js"></script>
+</html>

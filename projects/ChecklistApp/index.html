@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Maplestory Checklist</title>
+
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="./css/index.css" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+        <!-- Links to Icons -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="main">
+            <!-- Navigation Bar -->
+            <div id="navbar">
+                <div class="nav-header--container">
+                    <div class="nav-header" id="nav-header--dailies">DAILIES</div>
+                    <div class="nav-header hidden" id="nav-header--weeklies">WEEKLIES</div>
+                    <div class="nav-header--icon" id="nav-header--icon">
+                        <a href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="nav-items--container">
+                    <div class="nav-item" id="nav-item--character">
+                        <span><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="nav--separator"></div>
+                    <div class="nav-item" id="nav-item--timer">
+                        <span><i class="fa fa-hourglass-half fa-fw" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="nav--separator"></div>
+                    <div class="nav-item" id="nav-item--edit">
+                        <span><i class="fa fa-eye-slash fa-fw" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="nav--separator"></div>
+                    <div class="nav-item" id="nav-item--config">
+                        <span><i class="fa fa-cog fa-fw" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="content-container">
+                <div id="content">
+                    <div class="content-horizontal" id="content--dailies"></div>
+                    <div class="content-horizontal hidden" id="content--weeklies"></div>
+                </div>
+            </div>
+            <!-- Clocks -->
+            <div id="clocks">
+                <div class="" id="clock--daily">
+                    <div class="clock-module">
+                        <div class="clock-title">All</div>
+                        <div class="clock-display" id="clock--daily-all">
+                            <div>
+                                <span class="days"></span>
+                                <div class="smalltext">Days</div>
+                            </div>
+                            <div>
+                                <span class="hours"></span>
+                                <div class="smalltext">Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div class="smalltext">Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div class="smalltext">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clock-module" id="filler"></div>
+                </div>
+                <div class="hidden" id="clock--weekly">
+                    <div class="clock-module">
+                        <div class="clock-title">Boss</div>
+                        <div class="clock-display" id="clock--weekly-bosses">
+                            <div>
+                                <span class="days"></span>
+                                <div class="smalltext">Days</div>
+                            </div>
+                            <div>
+                                <span class="hours"></span>
+                                <div class="smalltext">Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div class="smalltext">Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div class="smalltext">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clock-module">
+                        <div class="clock-title">Other</div>
+                        <div class="clock-display" id="clock--weekly-other">
+                            <div>
+                                <span class="days"></span>
+                                <div class="smalltext">Days</div>
+                            </div>
+                            <div>
+                                <span class="hours"></span>
+                                <div class="smalltext">Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div class="smalltext">Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div class="smalltext">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="renderer.js"></script>
+    <script src="./js/index.js"></script>
+</html>
