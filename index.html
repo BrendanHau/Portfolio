@@ -1,229 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- HTML Setup -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brendan Portfolio Website</title>
+    <head>
+        <!-- HTML Setup -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brendan Portfolio Website</title>
 
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="./css/styles.css" />
 
-    <!-- Links to Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Links to Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Links to Icons -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Content Wrapper -->
-    <div id="content-wrapper">
-      <!-- Navigation Bar -->
-      <nav class="navbar">
-        <a href="https://brendanhau.github.io/Portfolio/" class="brand-title"
-          >BRENDAN HAU</a
-        >
-        <a class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-          <ul>
-            <li>
-              <a href="#intro-section" class="underline">INTRO</a>
-            </li>
-            <li>
-              <a href="#about-section" class="underline">ABOUT</a>
-            </li>
-            <li>
-              <a href="#portfolio-section" class="underline">PORTFOLIO</a>
-            </li>
-            <li>
-              <a href="#contact-wrapper" class="underline">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <!-- Links to Icons -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <a href="https://brendanhau.github.io/Portfolio/" class="brand-title"
+                    >BRENDAN HAU</a
+                >
+                <a class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar-links">
+                    <ul>
+                        <li>
+                            <a href="#intro-section" class="underline">INTRO</a>
+                        </li>
+                        <li>
+                            <a href="#about-section" class="underline">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio-section" class="underline">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#contact-wrapper" class="underline">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-      <!-- Intro Section -->
-      <div class="intro-wrapper" id="intro-section">
-        <div class="intro-overlay"></div>
-        <div class="content fade-in">
-          <div class="content-main">Hey there! I'm <span>Brendan</span>.</div>
-          <div class="content-under">Software Developer</div>
-        </div>
-      </div>
-
-      <!-- About Section-->
-      <div class="about-wrapper" id="about-section">
-        <h1 class="section-header-dark fade-in">ABOUT</h1>
-        <div class="about-container fade-in">
-          <div class="about-photo"></div>
-          <div class="about-content">
-            Hi! My name is Brendan and I'm a Software Developer currently
-            located in Toronto. I'm a recent graduate at the University of
-            Toronto, with a completed degree in Computer Science and looking for
-            opportunities to learn and grow. I enjoy creating aesthetically
-            pleasing designs that also contains cool and useful functionalities.
-            Below are a list of technologies that I'm familiar with, but I am
-            open to learning new languages as well!
-          </div>
-          <div class="about-skills">
-            <div class="skills-headline"></div>
-            <div class="skills-container">
-              <div class="skills-item" id="html"></div>
-              <div class="skills-item" id="css"></div>
-              <div class="skills-item" id="js"></div>
-              <div class="skills-item" id="c"></div>
-              <div class="skills-item" id="python"></div>
-              <div class="skills-item" id="java"></div>
-              <div class="skills-item" id="github"></div>
-              <div class="skills-item" id="microsoft"></div>
-              <div class="skills-item" id="photoshop"></div>
+            <!-- Intro Section -->
+            <div class="intro-wrapper" id="intro-section">
+                <div class="intro-overlay"></div>
+                <div class="content fade-in">
+                    <div class="content-main">Hey there! I'm <span>Brendan</span>.</div>
+                    <div class="content-under">Software Developer</div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Resume -->
-      <div class="resume-wrapper" id="resume-section">
-        <a href="./brendanhau_resume.pdf"> View Resume </a>
-      </div>
-
-      <!-- Popup Background Overlay -->
-      <div id="overlay"></div>
-
-      <!-- Portfolio Section -->
-      <div class="portfolio-wrapper" id="portfolio-section">
-        <h1 class="section-header-dark fade-in">PORTFOLIO</h1>
-        <!-- Portfolio -->
-        <div class="portfolio-container">
-          <!-- Portfolio Items -->
-          <div class="portfolio-item fade-in">
-            <div
-              class="portfolio-item_img"
-              id="portfolio-item_maplestory"
-            ></div>
-            <div class="portfolio-item_content">
-              <div class="portfolio-item_title">Maplestory Checklist</div>
-              <div class="portfolio-item_languages">HTML, CSS, JavaScript</div>
-              <button data-modal-target="#maplestory-checklist">
-                Learn More
-              </button>
+            <!-- About Section-->
+            <div class="about-wrapper" id="about-section">
+                <h1 class="section-header-dark fade-in">ABOUT</h1>
+                <div class="about-container fade-in">
+                    <div class="about-photo"></div>
+                    <div class="about-content">
+                        Hi! My name is Brendan and I'm a Software Developer currently located in
+                        Toronto. I'm a recent graduate at the University of Toronto, with a
+                        completed degree in Computer Science and looking for opportunities to learn
+                        and grow. I enjoy creating aesthetically pleasing designs that also contains
+                        cool and useful functionalities. Below are a list of technologies that I'm
+                        familiar with, but I am open to learning new languages as well!
+                    </div>
+                    <div class="about-skills">
+                        <div class="skills-headline"></div>
+                        <div class="skills-container">
+                            <div class="skills-item" id="html"></div>
+                            <div class="skills-item" id="css"></div>
+                            <div class="skills-item" id="js"></div>
+                            <div class="skills-item" id="c"></div>
+                            <div class="skills-item" id="python"></div>
+                            <div class="skills-item" id="java"></div>
+                            <div class="skills-item" id="github"></div>
+                            <div class="skills-item" id="microsoft"></div>
+                            <div class="skills-item" id="photoshop"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Popups -->
-      <div class="modal" id="maplestory-checklist">
-        <div class="modal-header">
-          <div class="title">Maplestory Checklist</div>
-          <button data-close-button class="close-button">&times;</button>
-        </div>
-        <div class="modal-image-wrapper">
-          <div class="modal-image">
-            <img src="./assets/maplestory_site.png" />
-          </div>
+
+            <!-- Resume -->
+            <div class="resume-wrapper" id="resume-section">
+                <a href="./brendanhau_resume.pdf"> View Resume </a>
+            </div>
+
+            <!-- Popup Background Overlay -->
+            <div id="overlay"></div>
+
+            <!-- Portfolio Section -->
+            <div class="portfolio-wrapper" id="portfolio-section">
+                <h1 class="section-header-dark fade-in">PORTFOLIO</h1>
+                <!-- Portfolio -->
+                <div class="portfolio-container">
+                    <!-- Portfolio Items -->
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-item_img" id="portfolio-item_maplestory"></div>
+                        <div class="portfolio-item_content">
+                            <div class="portfolio-item_title">Maplestory Checklist - Website</div>
+                            <div class="portfolio-item_languages">HTML, CSS, JavaScript</div>
+                            <button data-modal-target="#maplestory-checklist">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-in">
+                        <div class="portfolio-item_img" id="portfolio-item_checklist_app"></div>
+                        <div class="portfolio-item_content">
+                            <div class="portfolio-item_title">Maplestory Checklist - App</div>
+                            <div class="portfolio-item_languages">
+                                HTML, CSS, JavaScript, Electron
+                            </div>
+                            <button data-modal-target="#maplestory-checklist-app">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Popups -->
+            <div class="modal" id="maplestory-checklist">
+                <div class="modal-header">
+                    <div class="title">Maplestory Checklist - Website</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-image-wrapper">
+                    <div class="modal-image">
+                        <img src="./assets/maplestory_site.png" />
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    A website designed around the MMORPG video game "Maplestory". This site provides
+                    the user with a simple checklist interface where they can keep track of their
+                    progress within the game.
+                    <div class="details">
+                        The site utilizes the browser's local storage feature to save information
+                        pertaining to the current state of the checklist. The checklist will
+                        automatically reset certain categories at specific times (indicated by the
+                        countdowns) removing the need to manually reset the items. In the case that
+                        the user does not have the browser opened once the reset occurs, info about
+                        the last time visited is also stored. On site load, a function runs to check
+                        if the last time visited overlaps one of the reset timers. If it does, it
+                        will reset the corresponding category.
+                    </div>
+                </div>
+                <div class="modal-options">
+                    <a href="https://brendan-hau.github.io/Maplestory-Checklist/#weeklies-section"
+                        >View Site</a
+                    >
+                    <a
+                        href="https://github.com/BrendanHau/Portfolio/tree/main/projects/Maplestory-Checklist"
+                        >View Source</a
+                    >
+                </div>
+            </div>
+
+            <div class="modal" id="maplestory-checklist-app">
+                <div class="modal-header">
+                    <div class="title">Maplestory Checklist - App</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-image-wrapper">
+                    <div class="modal-image">
+                        <img src="./assets/checklist-overlay.gif" />
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    An application designed around the MMORPG video game "Maplestory". Similar to
+                    the website, it allows users an interface in which they can keep track of tasks
+                    and progress. The application is a simple semi-transparent, interactive overlay
+                    that requires minimal inputs to allow for fluid interactions between the game
+                    and the application. It does this by utilizing a unique horizontal scroll
+                    feature to save display space as well as several shortcut commands to interact
+                    with the app without constant mouse involvement.
+                    <div class="details">
+                        The application utilizes Electron as the base alongside HTML, CSS, and
+                        JavaScript to provide the aesthetic designs and functionalities. The purpose
+                        of this application is to serve a similar purpose to the website
+                        counterpart, with a bigger focus on usability. Some issues that the website
+                        did not address are:
+                        <span
+                            >- Tedious to interact with. Users must swap over to a browser to use it
+                            (the issue is most prominent for users with a single monitor)</span
+                        >
+                        <span
+                            >- Lack of customizations. The website only served the purpose of a
+                            checklist. It did not include features such as customizing what items
+                            are shown, adding new items, separating checklists for different
+                            characters, etc.</span
+                        >
+                        Interactability was addressed by converting the checklist into an
+                        application that overlayed above the game client so that users can mouse
+                        over the application while still in game. This is notably simpler for users
+                        with a single monitor. Shortcuts that hide the application also aid in this,
+                        so that users do not have to physically mouse over the application for
+                        certain events. In addition to this, the app features a host of customizable
+                        options to better fit individual user's needs, such as choosing what will be
+                        displayed, and which items to include in the list.
+                    </div>
+                </div>
+                <div class="modal-options">
+                    <div>View Site</div>
+                    <a
+                        href="https://github.com/BrendanHau/Portfolio/tree/main/projects/ChecklistApp"
+                        >View Source</a
+                    >
+                </div>
+            </div>
+
+            <div class="modal" id="contact-incomplete">
+                <div class="modal-header">
+                    <div class="title">Incomplete Contact Form</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    Sorry, it seems that the contact form is incomplete. Feel free to message me
+                    through phone at <span>416-995-6682</span> or through email at
+                    <span>brendanhau96@gmail.com</span> and I'll try and get back to you as soon as
+                    possible.
+                </div>
+            </div>
         </div>
 
-        <div class="modal-body">
-          A website designed around the MMORPG video game "Maplestory". This
-          site provides the user with a simple checklist interface where they
-          can keep track of their progress within the game.
-          <div class="details">
-            The site utilizes the browser's local storage feature to save
-            information pertaining to the current state of the checklist. The
-            checklist will automatically reset certain categories at specific
-            times (indicated by the countdowns) removing the need to manually
-            reset the items. In the case that the user does not have the browser
-            opened once the reset occurs, info about the last time visited is
-            also stored. On site load, a function runs to check if the last time
-            visited overlaps one of the reset timers. If it does, it will reset
-            the corresponding category.
-          </div>
-        </div>
-        <div class="modal-options">
-          <a
-            href="https://brendan-hau.github.io/Maplestory-Checklist/#weeklies-section"
-            >View Site</a
-          >
-          <a href="https://github.com/Brendan-Hau/Maplestory-Checklist"
-            >View Source</a
-          >
-        </div>
-      </div>
-
-      <div class="modal" id="contact-incomplete">
-        <div class="modal-header">
-          <div class="title">Incomplete Contact Form</div>
-          <button data-close-button class="close-button">&times;</button>
+        <!-- Contact Section -->
+        <div id="contact-wrapper">
+            <div class="contact-box fade-in">
+                <h1 class="section-header-light">CONTACT</h1>
+                <div class="contact-form">
+                    <input type="text" class="field" placeholder="Name" />
+                    <input type="email" class="field" placeholder="Your Email" />
+                    <textarea class="field" placeholder="Message"></textarea>
+                    <div class="button-wrapper">
+                        <input
+                            class="button"
+                            type="submit"
+                            value="SUBMIT"
+                            data-modal-target="#contact-incomplete"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="modal-body">
-          Sorry, it seems that the contact form is incomplete. Feel free to
-          message me through phone at <span>416-995-6682</span> or through email
-          at <span>brendanhau96@gmail.com</span> and I'll try and get back to
-          you as soon as possible.
+        <!-- Footer Section -->
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#" id="footer-facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/brendan-hau-5846a6187/"
+                        id="footer-linkedin"
+                        ><i class="fa fa-linkedin"></i
+                    ></a>
+                </li>
+                <li>
+                    <a href="#" id="footer-instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#" id="footer-twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+            </ul>
+            <div class="footer-brand">BRENDAN HAU <span>&#169; 2020</span></div>
         </div>
-      </div>
-    </div>
 
-    <!-- Contact Section -->
-    <div id="contact-wrapper">
-      <div class="contact-box fade-in">
-        <h1 class="section-header-light">CONTACT</h1>
-        <div class="contact-form">
-          <input type="text" class="field" placeholder="Name" />
-          <input type="email" class="field" placeholder="Your Email" />
-          <textarea class="field" placeholder="Message"></textarea>
-          <div class="button-wrapper">
-            <input
-              class="button"
-              type="submit"
-              value="SUBMIT"
-              data-modal-target="#contact-incomplete"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer-container">
-      <ul>
-        <li>
-          <a href="#" id="footer-facebook"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/brendan-hau-5846a6187/"
-            id="footer-linkedin"
-            ><i class="fa fa-linkedin"></i
-          ></a>
-        </li>
-        <li>
-          <a href="#" id="footer-instagram"><i class="fa fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#" id="footer-twitter"><i class="fa fa-twitter"></i></a>
-        </li>
-      </ul>
-      <div class="footer-brand">BRENDAN HAU <span>&#169; 2020</span></div>
-    </div>
-
-    <!-- Script -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="./js/script.js"></script>
-  </body>
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
 </html>
